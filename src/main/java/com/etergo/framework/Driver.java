@@ -21,17 +21,10 @@ public class Driver {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, ConfigData.getDeviceOS());
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, ConfigData.getDeviceName());
         capabilities.setCapability(MobileCapabilityType.APP, ConfigData.getPathToApp());
-//        capabilities.setCapability("noReset", false);
         if (Utilities.isAndroid()) {
             /** This is required in case of Android debug build **/
             capabilities.setCapability("appWaitActivity", "*");
             capabilities.setCapability("automationName", "uiautomator2");
-        } else {
-            //capabilities.setCapability("automationName", "XCUITest");
-            /** Add below capability for iOS while running on real device **/
-            //capabilities.setCapability("udid", "0d86e45c7e5664e14b421eb7f3c29f93c4d5628c");
-            /** Add below capability for iOS if you need xcode logs **/
-            //capabilities.setCapability("showXcodeLog", "true");
         }
         return capabilities;
     }
