@@ -1,4 +1,4 @@
-# EtergoAppiumTest
+# AppiumProject
 This repository contains tests for Etergo Zoom app
 
 Automation framework is a gradle project which uses Appium, Cucumber, TestNG and Java. The IDE used for developing is IntelliJ IDEA.
